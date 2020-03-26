@@ -1,6 +1,6 @@
 # Fundamentals of Data Structures Notes
 
-My program practices and exercise solutions for the books [Fundamentals of Data Structures in C 2nd Edition(https://www.cise.ufl.edu/~sahni/fdsc2ed/)] written by Horowitz, Sanhni Anderson-Freed
+My program practices and exercise solutions for the books [Fundamentals of Data Structures in C 2nd Edition](https://www.cise.ufl.edu/~sahni/fdsc2ed/) written by Horowitz, Sanhni Anderson-Freed
 
 ## Chapter
 
