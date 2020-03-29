@@ -14,3 +14,16 @@
 - [Program 1.9](examples/prog1-9.c)
 
 ## Exercises
+
+- [Exercise p17.01](exercises/exercise-p17-01.c)
+- [Exercise p17.02](exercises/exercise-p17-02.c)
+- [Exercise p17.03](exercises/exercise-p17-03.c)
+- [Exercise p17.04](exercises/exercise-p17-04.c)
+- [Exercise p17.05](exercises/exercise-p17-05.c)
+- [Exercise p17.06](exercises/exercise-p17-06.c)
+- [Exercise p17.07](exercises/exercise-p17-07.c)
+- [Exercise p17.08](exercises/exercise-p17-08.c)
+- [Exercise p17.09](exercises/exercise-p17-09.c)
+- [Exercise p17.10](exercises/exercise-p17-10.c)
+- [Exercise p17.11](exercises/exercise-p17-11.c)
+- [Exercise p17.12](exercises/exercise-p17-12.c)
