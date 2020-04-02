@@ -1,0 +1,42 @@
+Page 21 Exercise 02
+
+Create an ADT, Set. Use the standard mathematics definition and 
+include the following operations: Create, Insert, Remove, IsIn, 
+Union, Intersection, Difference.
+
+--------------------------------------------------------------------------------
+
+ADT Set is 
+
+    objects: a subrange of the integers starting at (INT_MIN) and ending at the 
+             maximum integer (INT_MAX) on the computer 
+    functions: for all x, y ∈ Set; TRUE, FALSE ∈ Boolean and Boolean operations 
+               is defined in Problem 4 are available (not, and, or, ...)
+               and where ==, Ø, +, head(s), tail(s) are the usual set operations,
+               where == return TRUE if tw set elements are the same, and TRUE otherwise.
+               Ø is the empty set.
+               + adds and element to a set.
+               head(s) extracts the first member i the set.
+               tail(s) extracts a list of all other elements in the set.
+                       An empty set contains no tail. A set with only one elements has
+                       the empty set has it tail.
+               Set Create(s)      ::= Ø
+               Boolean IsEmpty(s) ::= if (s == Ø) return TRUE
+                                      else return FALSE
+               Boolean IsIn(x, s) ::= if (isEmpty(s)) return FALSE
+                                      if (x == head(s)) return FALSE
+                                      return IsIn(x, tail(s))
+               Set Insert(x, s)   ::= if (IsIn(x, s)) return s
+                                      else return x + s
+               Set Remove(x, s)   ::= if (x == head(s)) return tail(s)
+                                      return Remove(x, tail(s))
+               Set Union(x, s1, s2) ::= if IsEmpty(s1) return s2
+                                        if IsIn(head(s1), s2) return Union(x, tail(s1), s2)
+                                        return head(s1) + Union(x, tail(s1), s2)
+               Set Intersection(x, s1, s2) ::= if IsEmpty(s1) return Ø
+                                               if IsIn(head(s1), s2) return heads(s1) + Intersection(x, tail(s1, s2))
+                                               return Intersection(x, tail(s1), s2)
+               Boolean Difference(s1, s2) ::= if IsEmpty(s1) return Ø
+                                              if IsIn(head(s1), s2) return Difference(x, tail(s1), s2)
+                                              return head(s1) + Difference(x, tail(s1), s2)
+end Set

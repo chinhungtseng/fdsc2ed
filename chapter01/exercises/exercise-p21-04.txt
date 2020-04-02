@@ -1,0 +1,26 @@
+Page 21 Exercise 04
+
+Create an ADT, Boolean. The minimal operations are And, Or,
+Not, Xor(Exclusive or), Equivalent, and Implies.
+
+--------------------------------------------------------------------------------
+
+ADT Boolan is objects:
+TRUE, FALSE, ∈ Boolean and the Boolean == the usual boolean operation.
+where == reuturn TRUE is tw set elements are the same, and TRUE otherwise.
+
+    Boolean not(x)           ::= if (x) return TRUE 
+                                 return FALSE
+    Boolean and(x, y)        ::= if (not(x)) return FALSE
+                                 if (not(y)) return FALSE
+                                 return TRUE
+    Boolean or(x, y)         ::= if (x) return TRUE
+                                 if (y) return TRUE
+                                 return FALSE
+    Boolean xor(, y)         ::= if (and(not(x), not(y))) return FALSE
+                                 if (and(x, y)) return FALSE
+                                 return TRUE
+    Boolean equivalent(x, y) ::= if (and(not(x), not(y))) return TRUE
+                                 if (and(x, y)) return TRUE
+                                 return FALSE
+end Boolean

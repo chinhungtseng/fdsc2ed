@@ -1,0 +1,34 @@
+Page 21 Exercise 03
+
+Createa an ADT, Bag. In mathematics a bag is similar to a set 
+except that a bag may contain duplicate elements.
+The minimal operations should include: Create, Insert, Remove and IsIn.
+
+--------------------------------------------------------------------------------
+
+ADT Bag is objects: 
+a subrange of the integers starting at (INT_MIN) and ending at the maximum 
+integer(INT_MAX) on the computer functions: for 
+all x, y ∈ Bag; TRUE, FALSE ∈ Boolean and the Boolean operations defined in 
+Problem 4 are available (not, and, or, ...)
+and where ==, Ø + head(s), tail(s) are the usual Bag operations,
+where == return TRUE if tw set elements are the same, and TRUE otherwise.
+Ø is the empty Bag.
++ adds and element to a Bag.
+head(s) extracts the first member in the Bag.
+tail(s) extracts a list of all other elements in the Bag. An empty bag contains 
+no tail. A bag wiht onlu one element has the empty bag has it tail.
+
+Bag Create(b)      ::= Ø
+Boolean isEmpty(b) ::= if (b == Ø) return TREU 
+                       else return FALSE
+Boolean IsIn(x, b) ::= if (IsEmpty(b)) return FALSE
+                       if (x == head(b)) return TRUE
+                       else return IsIn(x, tail(b))
+Bag Insert(x, b)   ::= if (IsEmpty(b)) return b
+                       else return x + b
+Bag Remove(x, b)   ::= if (IsEmpty(b)) return b
+                       if (x == head(b)) return tail(b)
+                       else return Remove(x, tail(b))
+end Bag
+ 

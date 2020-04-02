@@ -1,0 +1,48 @@
+Page 21 Exercise 01
+
+Add the following operations to the NaturalNumber ADT: Predecessor, 
+IsGreater, Multiply, Divided.
+
+--------------------------------------------------------------------------------
+
+ADT NaturalNumber is 
+    
+    objects:
+        
+        an ordered subrange of the integers starting at zero and ending 
+        at the maximum integer (INT_MAX) on the computer
+
+    functions:
+        
+        for all x, y ∈ NaturalNumber, TRUE, FALSE ∈ Boolean and where +, -, <,
+        and == are usual integer operations
+
+        NaturalNumber Zero()          ::= 0
+        Boolean IsZero(x)             ::= if (x) return FALSE
+                                          else return TRUE
+        Boolean Equal(x, y)           ::= if (x == y) return TRUE
+                                          else return FALSE
+        NaturalNumber Successor(x)    ::= if (x == INT_MAX) return x
+                                           else return x + 1
+        NaturalNumber Add(x, y)       ::= if ((x + y) <= INT_MAX) return x + y
+                                          else return INT_MAX
+        NaturalNumber Substract(x, y) ::= if (x < y) return 0
+                                          else return x - y
+        NaturalNumber Predecessor(x)  ::= if (x < 0) return ERROR
+                                          if (x == 0) return 0
+                                          else return x - 1
+        Boolean IsGreater(x, y)       ::= if ((x - y) < 0) return ERROR
+                                          if ((x - y) == 0) return FALSE
+                                          else return TRUE
+        NaturalNumber Multiply(x, y)  ::= if (x < 0) return ERROR
+                                          if (y < 0) return ERROR
+                                          if (y == 1) return x
+                                          return x + Multiply(x, y - 1)
+        NaturalNumber Divide(x, y)    ::= if (x < 0) return ERROR
+                                          if (y < 0) return ERROR
+                                          if (y == 0) return ERROR
+                                          if (x < y) return 0
+                                          return 1 + Divide(x - y, y)
+
+end NaturalNumber
+

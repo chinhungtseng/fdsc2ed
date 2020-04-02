@@ -12,6 +12,9 @@
 - [Program 1.7](examples/prog1-7.c)
 - [Program 1.8](examples/prog1-8.c)
 - [Program 1.9](examples/prog1-9.c)
+- [Program 1.10](examples/prog1-10.c)
+- [Program 1.11](examples/prog1-11.c)
+- [Program 1.12](examples/prog1-12.c)
 
 ## Exercises
 
@@ -27,3 +30,7 @@
 - [Exercise p17.10](exercises/exercise-p17-10.c)
 - [Exercise p17.11](exercises/exercise-p17-11.c)
 - [Exercise p17.12](exercises/exercise-p17-12.c)
+- [Exercise p21.01](exercises/exercise-p21-01.txt)
+- [Exercise p21.02](exercises/exercise-p21-02.txt)
+- [Exercise p21.03](exercises/exercise-p21-03.txt)
+- [Exercise p21.04](exercises/exercise-p21-04.txt)

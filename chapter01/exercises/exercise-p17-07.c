@@ -8,9 +8,10 @@
 
 int main (void)
 {
-    unsigned long long int n, result, factorial (unsigned long long int n);
+    int n;
+    unsigned long long int result, factorial (int n);
     printf("Enter a number between 0 to 50: ");
-    scanf("%llu", &n);
+    scanf("%i", &n);
 
     // Test if input number is greater than MAX_NUMBER 
     if (n > MAX_NUMBER) {
@@ -24,7 +25,7 @@ int main (void)
     return 0;
 }
 
-unsigned long long int factorial (unsigned long long int n)
+unsigned long long int factorial (int n)
 {
     if (n <= 1) {
         return 1;
