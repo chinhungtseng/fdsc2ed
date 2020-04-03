@@ -1,0 +1,20 @@
+Page 25 Exercise 05
+
+Determine the space complexity of the function created in Exercise 12,
+Section 1.3 (powerset problem).
+
+-------------------------------------------------------------------
+
+void powerset (char *list, int n)
+{
+   unsigned int i, j, comb_num = pow(2, n);
+
+   for (i = 0; i < comb_num; ++i) {
+      for (j = 0; j < n; ++j)
+         if (i & (1 << j)) 
+            printf("%c", list[j]);
+      printf("\n");
+   }
+}
+
+S_powerset(I) = 0.

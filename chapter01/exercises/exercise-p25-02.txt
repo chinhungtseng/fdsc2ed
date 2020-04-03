@@ -1,0 +1,45 @@
+Page 25 Exercise 02
+
+Determine the space complexity of the iterative and recursive 
+Fibonacci number functions created in Exercise 8, Section 1.3.
+
+-------------------------------------------------------------------
+
+int recurFib(int n)
+{ /*recursive version */
+  if ((n==0) || (n==1))  return 1;
+  return recurFib(n-1) + recurFib(n-2);
+}
+
+|-----------------------------------|--------|-----------------|
+| Type                              | Name   | Number of bytes |
+|-----------------------------------|--------|-----------------|
+| parameter: (int)                  | n      | 4               |
+| parameter: (int)                  | n      | 4               |
+|-----------------------------------|--------|-----------------|
+| TOTAL per recursive call          |        | 8               |
+|-----------------------------------|--------|-----------------|
+
+Space needed for one recursive call is 8.
+
+if n == MAX_SIZE, then S_recurFact(I) = 8 * MAX_SIZE
+
+-------------------------------------------
+
+int iterFib(int n)
+{/* find the factorial, return as a double
+    to keep it from overflowing */
+   int i;
+   int fib, fib1, fib2;
+   if ((n == 0) || (n == 1)) return 1;
+   fib1 = fib2 = 1;
+   for (i = 2; i <=n; i++) {
+     fib = fib1+fib2;
+	 fib2 = fib1;
+	 fib1 = fib;
+   }
+   return fib;
+}
+
+Because this function has only fixed space requirements. 
+Therefore, S_iterFact(I) = 0

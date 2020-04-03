@@ -1,0 +1,42 @@
+Page 25 Exercise 01
+
+Determine the space complexity of the iterative and recursive
+factorial functions created in Exercise 7, Section 1.3.
+
+-------------------------------------------------------------------
+
+double recurFact(int n)
+{ /*recursive version */
+  if ((n==0) || (n==1))  return 1.0;
+  return n*recurFact(n-1);
+}
+
+|-----------------------------------|--------|-----------------|
+| Type                              | Name   | Number of bytes |
+|-----------------------------------|--------|-----------------|
+| parameter: (int)                  | n      | 4               |
+| local variable (int)              | n      | 4               |
+|-----------------------------------|--------|-----------------|
+| TOTAL per recursive call          |        | 8               |
+|-----------------------------------|--------|-----------------|
+
+Space needed for one recursive call is 8.
+
+if n == MAX_SIZE, then S_recurFact(I) = 8 * MAX_SIZE
+
+-------------------------------------------
+
+double iterFact(int n)
+{/* find the factorial, return as a double
+    to keep it from overflowing */
+   int i;
+   double answer;
+   if ((n == 0) || (n == 1)) return 1.0;
+   answer = 1.0;
+   for (i = n; i > 1; i--)
+      answer *= i;
+   return answer;
+}
+
+Because this function has only fixed space requirements. 
+Therefore, S_iterFact(I) = 0
